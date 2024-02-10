@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2 id="logo">CerviCare</h2>
+            <ul>
+                <l1><a href="/">Home</a></l1>
+                <l1><a href="/info">Info</a></l1>
+                <l1><a action="/diagnose">Diagnosis</a></l1>
+                <l1><a href="/faq">FAQs</a></l1>
+                <l1><img src="../images/ThaparLogo.png" alt=""></l1>
+            </ul>
+            
+        </div>
+        <div class="main_content">
+            <form action="/predict" method="POST">
+                <div class="container top_title"><h1 class="form_title ">Age</h1><input class="form_input" type="number" name="data1"></div>
+                <div class="container"><h1 class="form_title">Number of sexual partners</h1><input class="form_input" type="number" name="data2"></div>
+                <div class="container"><h1 class="form_title">First sexual intercourse(Age)</h1><input class="form_input" type="number" name="data3"></div>
+                <div class="container"><h1 class="form_title">Number of pregnencies</h1><input class="form_input" type="number" name="data4"></div>
+                <div class="container"><h1 class="form_title">smokes(packs per year)</h1><input class="form_input" type="number" step="0.01" name="data5"></div>
+                <div class="container"><h1 class="form_title">hormonal contraceptives(years)</h1><input class="form_input" type="number" step="0.01" name="data6"></div>
+                <div class="container"><h1 class="form_title">IUD(Years)</h1><input class="form_input" type="number" step="0.01" name="data7"></div>
+                <div class="container"><h1 class="form_title">STDs</h1><input class="form_input" type="number" step="0.01" name="data8"></div>
+                <div class="container"><h1 class="form_title">STDs:cervical condylomatosis</h1><input class="form_input" type="number" name="data9"></div>
+                <div class="container"><h1 class="form_title">STDs:veginal condylomatosis</h1><input class="form_input" type="number" name="data10"></div>
+                <div class="container"><h1 class="form_title">STDs:syphilis</h1><input class="form_input" type="number" name="data11"></div>
+                <div class="container"><h1 class="form_title">STDs:pelvic inflamatry</h1><input class="form_input" type="number" name="data12"></div>
+                <div class="container"><h1 class="form_title">STDs:genital herpes</h1><input class="form_input" type="number" name="data13"></div>
+                <div class="container"><h1 class="form_title">STDs:molluscum contagiosum</h1><input class="form_input" type="number" name="data14"></div>
+                <div class="container"><h1 class="form_title">STDs:AIDS</h1><input class="form_input" type="number" name="data15"></div>
+                <div class="container"><h1 class="form_title">STDs:HIV</h1><input class="form_input" type="number" name="data16"></div>
+                <div class="container"><h1 class="form_title">STDs:Hepatitis B</h1><input class="form_input" type="number" name="data17"></div>
+                <div class="container"><h1 class="form_title">STDs:HPV</h1><input class="form_input" type="number" name="data18"></div>
+                <div class="container"><h1 class="form_title">STD SS</h1><input class="form_input" type="number" name="data19"></div>
+                <div class="container"><h1 class="form_title">Dx:Cancer</h1><input class="form_input" type="number" name="data20"></div>
+                <div class="container"><h1 class="form_title">Dx:CIN</h1><input class="form_input" type="number" name="data21"></div>
+                <div class="container"><h1 class="form_title">Dx</h1><input class="form_input" type="number" name="data22"></div>
+                <div class="container"><h1 class="form_title">Hinselmann</h1><input class="form_input" type="number" name="data23"></div>
+                <div class="container"><h1 class="form_title">Schiller</h1><input class="form_input" type="number" name="data24"></div>
+                <div class="container"><h1 class="form_title">Citology</h1><input class="form_input" type="number" name="data25"></div>
+                <div class="container"><h1 class="form_title">Result</h1>
+                    {% if data==[0] %}
+                    <h1 class="form_title">NO Predicted cervical cancer</h1>
+                    {% elif data==[1] %}
+                    <h1 class="form_title">Predicted cervical cancer</h1>
+                    {% else %}
+                    <h1 class="form_title"></h1>
+                    {% endif %}
+                    
+                </div>
+                <input class="submit_button" type="submit" value="Predict">
+
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>
