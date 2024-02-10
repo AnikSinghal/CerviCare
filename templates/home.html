@@ -16,6 +16,7 @@
                 <l1><a href="/info">Info</a></l1>
                 <l1><a action="/diagnose">Diagnosis</a></l1>
                 <l1><a href="/faq">FAQs</a></l1>
+                <l1><a href="/about">About</a></l1>
                 <l1><img src="../images/ThaparLogo.png" alt=""></l1>
             </ul>
             
@@ -49,9 +50,9 @@
                 <div class="container"><h1 class="form_title">Citology</h1><input class="form_input" type="number" name="data25"></div>
                 <div class="container"><h1 class="form_title">Result</h1>
                     {% if data==[0] %}
-                    <h1 class="form_title">NO Predicted cervical cancer</h1>
+                    <h1 class="form_title">Not likely to have cervical cancer</h1>
                     {% elif data==[1] %}
-                    <h1 class="form_title">Predicted cervical cancer</h1>
+                    <h1 class="form_title">Likely to have cervical cancer</h1>
                     {% else %}
                     <h1 class="form_title"></h1>
                     {% endif %}
